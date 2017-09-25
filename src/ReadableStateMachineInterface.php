@@ -12,4 +12,12 @@ interface ReadableStateMachineInterface extends
     StatusAwareInterface,
     PossibleTransitionsAwareInterface
 {
+    /**
+     * {@inheritdoc}
+     *
+     * @since [*next-version*]
+     *
+     * @return ReadableStateMachineInterface The state machine with the new state.
+     */
+    public function transition($transition);
 }
