@@ -29,7 +29,6 @@ class StateMachineInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-                     ->getStatus()
                      ->transition()
                      ->canTransition();
 
@@ -49,12 +48,6 @@ class StateMachineInterfaceTest extends TestCase
             static::TEST_SUBJECT_CLASSNAME,
             $subject,
             'A valid instance of the test subject could not be created.'
-        );
-
-        $this->assertInstanceOf(
-            'Dhii\Machine\StatusAwareInterface',
-            $subject,
-            'Test subject does not implement parent interface.'
         );
     }
 }
