@@ -52,13 +52,7 @@ class StateMachineInterfaceTest extends TestCase
         );
 
         $this->assertInstanceOf(
-            static::TEST_SUBJECT_CLASSNAME,
-            $subject,
-            'Test subject does not implement parent interface.'
-        );
-
-        $this->assertInstanceOf(
-            static::TEST_SUBJECT_CLASSNAME,
+            'Dhii\Machine\StatusAwareInterface',
             $subject,
             'Test subject does not implement parent interface.'
         );
