@@ -35,7 +35,8 @@ interface StateMachineInterface extends StatusAwareInterface
      *
      * This method does not guarantee that the transition will be successful.
      * It only indicates that a given transition can, at the very least, be attempted.
-     * The transition, when applied, is still permitted to fail and throw an exception.
+     * The transition, when applied, is still permitted to fail and throw an exception,
+     * even if this method returns `true`.
      *
      * @since [*next-version*]
      *
