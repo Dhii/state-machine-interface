@@ -9,8 +9,7 @@ namespace Dhii\Machine;
  */
 interface ReadableStateMachineInterface extends
     StateMachineInterface,
-    StatusAwareInterface,
-    PossibleTransitionsAwareInterface
+    StatusAwareInterface
 {
     /**
      * {@inheritdoc}

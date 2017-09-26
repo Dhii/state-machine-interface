@@ -63,11 +63,5 @@ class ReadableStateMachineInterfaceTest extends TestCase
             $subject,
             'Test subject does not implement parent interface.'
         );
-
-        $this->assertInstanceOf(
-            'Dhii\Machine\PossibleTransitionsAwareInterface',
-            $subject,
-            'Test subject does not implement parent interface.'
-        );
     }
 }
