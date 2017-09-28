@@ -2,7 +2,7 @@
 
 namespace Dhii\State\UnitTest;
 
-use Dhii\State\StatusAwareInterface as TestSubject;
+use Dhii\State\StateAwareInterface as TestSubject;
 use Xpmock\TestCase;
 
 /**
@@ -10,14 +10,14 @@ use Xpmock\TestCase;
  *
  * @since [*next-version*]
  */
-class StatusAwareInterfaceTest extends TestCase
+class StateAwareInterfaceTest extends TestCase
 {
     /**
      * The class name of the test subject.
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\State\StatusAwareInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\State\StateAwareInterface';
 
     /**
      * Creates a new instance of the test subject.
@@ -29,7 +29,7 @@ class StatusAwareInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-                     ->getStatus();
+                     ->getState();
 
         return $mock->new();
     }

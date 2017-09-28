@@ -29,7 +29,7 @@ class ReadableStateMachineInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->getStatus()
+            ->getState()
             ->getPossibleTransitions()
             ->transition()
             ->canTransition();
@@ -59,7 +59,7 @@ class ReadableStateMachineInterfaceTest extends TestCase
         );
 
         $this->assertInstanceOf(
-            'Dhii\State\StatusAwareInterface',
+            'Dhii\State\StateAwareInterface',
             $subject,
             'Test subject does not implement parent interface.'
         );
