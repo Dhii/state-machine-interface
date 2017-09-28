@@ -1,8 +1,8 @@
 <?php
 
-namespace Dhii\Machine\UnitTest;
+namespace Dhii\State\UnitTest;
 
-use Dhii\Machine\StatusAwareInterface as TestSubject;
+use Dhii\State\StatusAwareInterface as TestSubject;
 use Xpmock\TestCase;
 
 /**
@@ -17,7 +17,7 @@ class StatusAwareInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\Machine\StatusAwareInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\State\StatusAwareInterface';
 
     /**
      * Creates a new instance of the test subject.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhii\Machine;
+namespace Dhii\State;
 
 use Dhii\Util\String\StringableInterface as Stringable;
 use Traversable;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Dhii\Machine;
+namespace Dhii\State;
 
-use Dhii\Machine\Exception\CouldNotTransitionExceptionInterface;
-use Dhii\Machine\Exception\StateMachineExceptionInterface;
+use Dhii\State\Exception\CouldNotTransitionExceptionInterface;
+use Dhii\State\Exception\StateMachineExceptionInterface;
 use Dhii\Util\String\StringableInterface as Stringable;
 
 /**

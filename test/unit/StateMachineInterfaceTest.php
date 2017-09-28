@@ -1,8 +1,8 @@
 <?php
 
-namespace Dhii\Machine\UnitTest;
+namespace Dhii\State\UnitTest;
 
-use Dhii\Machine\StateMachineInterface as TestSubject;
+use Dhii\State\StateMachineInterface as TestSubject;
 use Xpmock\TestCase;
 
 /**
@@ -17,7 +17,7 @@ class StateMachineInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\Machine\StateMachineInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\State\StateMachineInterface';
 
     /**
      * Creates a new instance of the test subject.

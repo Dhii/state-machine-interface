@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhii\Machine\UnitTest;
+namespace Dhii\State\UnitTest;
 
 use Xpmock\TestCase;
 use Dhii\Machine\ReadableStateMachineInterface as TestSubject;
@@ -17,7 +17,7 @@ class ReadableStateMachineInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\Machine\ReadableStateMachineInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\State\ReadableStateMachineInterface';
 
     /**
      * Creates a new instance of the test subject.
@@ -53,13 +53,13 @@ class ReadableStateMachineInterfaceTest extends TestCase
         );
 
         $this->assertInstanceOf(
-            'Dhii\Machine\StateMachineInterface',
+            'Dhii\State\StateMachineInterface',
             $subject,
             'Test subject does not implement parent interface.'
         );
 
         $this->assertInstanceOf(
-            'Dhii\Machine\StatusAwareInterface',
+            'Dhii\State\StatusAwareInterface',
             $subject,
             'Test subject does not implement parent interface.'
         );

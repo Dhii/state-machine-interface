@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dhii\\Machine\\": "src"
+            "Dhii\\State\\": "src"
         }
     },
     "scripts": {

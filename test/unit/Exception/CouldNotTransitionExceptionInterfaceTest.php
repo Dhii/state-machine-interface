@@ -1,9 +1,9 @@
 <?php
 
-namespace Dhii\Machine\Exception\UnitTest;
+namespace Dhii\State\Exception\UnitTest;
 
 use Xpmock\TestCase;
-use Dhii\Machine\Exception\CouldNotTransitionExceptionInterface as TestSubject;
+use Dhii\State\Exception\CouldNotTransitionExceptionInterface as TestSubject;
 
 /**
  * Tests {@see TestSubject}.
@@ -17,7 +17,7 @@ class CouldNotTransitionExceptionInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\Machine\Exception\CouldNotTransitionExceptionInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\State\Exception\CouldNotTransitionExceptionInterface';
 
     /**
      * Creates a new instance of the test subject.
@@ -65,13 +65,13 @@ class CouldNotTransitionExceptionInterfaceTest extends TestCase
         );
 
         $this->assertInstanceOf(
-            'Dhii\Machine\Exception\StateMachineExceptionInterface',
+            'Dhii\State\Exception\StateMachineExceptionInterface',
             $subject,
             'Test subject does not implement parent interface.'
         );
 
         $this->assertInstanceOf(
-            'Dhii\Machine\TransitionAwareInterface',
+            'Dhii\State\TransitionAwareInterface',
             $subject,
             'Test subject does not implement parent interface.'
         );

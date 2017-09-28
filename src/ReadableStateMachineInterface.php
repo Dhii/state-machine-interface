@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhii\Machine;
+namespace Dhii\State;
 
 /**
  * Something that represents a state machine that exposes its current status and currently possible transitions.

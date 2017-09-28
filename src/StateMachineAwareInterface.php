@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhii\Machine;
+namespace Dhii\State;
 
 /**
  * Something that is aware of, and can provide, a state machine.

@@ -1,9 +1,9 @@
 <?php
 
-namespace Dhii\Machine\Exception;
+namespace Dhii\State\Exception;
 
 use Dhii\Exception\ThrowableInterface;
-use Dhii\Machine\StateMachineAwareInterface;
+use Dhii\State\StateMachineAwareInterface;
 
 /**
  * An exception thrown in relation to a state machine.

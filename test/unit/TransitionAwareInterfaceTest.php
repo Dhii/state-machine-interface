@@ -1,8 +1,8 @@
 <?php
 
-namespace Dhii\Machine\UnitTest;
+namespace Dhii\State\UnitTest;
 
-use Dhii\Machine\TransitionAwareInterface as TestSubject;
+use Dhii\State\TransitionAwareInterface as TestSubject;
 use Xpmock\TestCase;
 
 /**
@@ -17,7 +17,7 @@ class TransitionAwareInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\Machine\TransitionAwareInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\State\TransitionAwareInterface';
 
     /**
      * Creates a new instance of the test subject.
