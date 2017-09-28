@@ -21,10 +21,10 @@ interface StateMachineInterface
      *
      * @since [*next-version*]
      *
-     * @param string|Stringable $transition The transition code.
+     * @param string|Stringable $transition The transition.
      *
      * @throws CouldNotTransitionExceptionInterface If the transition failed or was aborted.
-     * @throws StateMachineExceptionInterface       If an error was encountered during transition.
+     * @throws StateMachineExceptionInterface       If any other error was encountered.
      *
      * @return StateMachineInterface The state machine with the new state.
      */
