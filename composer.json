@@ -13,6 +13,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^5.3 | ^7.0",
+        "dhii/factory-interface": "0.1-alpha1 | 0.1-alpha2",
         "dhii/stringable-interface": "^0.1",
         "dhii/data-key-value-aware-interface": "^0.1",
         "dhii/exception-interface": "^0.1|^0.2"
