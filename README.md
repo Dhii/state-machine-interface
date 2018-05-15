@@ -1,8 +1,8 @@
 # Dhii - State Machine Interface
 
-[![Build Status](https://travis-ci.org/dhii/machine-state-machine-interface.svg?branch=master)](https://travis-ci.org/dhii/machine-state-machine-interface)
-[![Code Climate](https://codeclimate.com/github/dhii/machine-state-machine-interface/badges/gpa.svg)](https://codeclimate.com/github/dhii/machine-state-machine-interface)
-[![Test Coverage](https://codeclimate.com/github/dhii/machine-state-machine-interface/badges/coverage.svg)](https://codeclimate.com/github/dhii/machine-state-machine-interface/coverage)
+[![Build Status](https://travis-ci.org/Dhii/machine-state-machine-interface.svg?branch=develop)](https://travis-ci.org/Dhii/machine-state-machine-interface)
+[![Code Climate](https://codeclimate.com/github/Dhii/machine-state-machine-interface/badges/gpa.svg)](https://codeclimate.com/github/Dhii/machine-state-machine-interface)
+[![Test Coverage](https://codeclimate.com/github/Dhii/machine-state-machine-interface/badges/coverage.svg)](https://codeclimate.com/github/Dhii/machine-state-machine-interface/coverage)
 [![Latest Stable Version](https://poser.pugx.org/dhii/machine-state-machine-interface/version)](https://packagist.org/packages/dhii/machine-state-machine-interface)
 [![This package complies with Dhii standards](https://img.shields.io/badge/Dhii-Compliant-green.svg?style=flat-square)][Dhii]
 
