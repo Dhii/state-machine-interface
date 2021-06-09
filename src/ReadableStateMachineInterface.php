@@ -6,6 +6,8 @@ namespace Dhii\State;
  * Something that represents a state machine that exposes its current state.
  *
  * @since [*next-version*]
+ *
+ * @psalm-immutable
  */
 interface ReadableStateMachineInterface extends
     StateMachineInterface,
@@ -16,7 +18,7 @@ interface ReadableStateMachineInterface extends
      *
      * @since [*next-version*]
      *
-     * @return ReadableStateMachineInterface The state machine with the new state.
+     * @return static The state machine with the new state.
      */
-    public function transition($transition);
+    public function transition($transition): StateMachineInterface;
 }

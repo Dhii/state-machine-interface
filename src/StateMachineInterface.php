@@ -4,12 +4,17 @@ namespace Dhii\State;
 
 use Dhii\State\Exception\CouldNotTransitionExceptionInterface;
 use Dhii\State\Exception\StateMachineExceptionInterface;
-use Dhii\Util\String\StringableInterface as Stringable;
+use Stringable;
 
 /**
  * Something that represents a state machine.
  *
  * @since [*next-version*]
+ *
+ * @psalm-type stringable = string|Stringable
+ * @psalm-type Transition = stringable
+ * @psalm-type State = stringable
+ * @psalm-immutable
  */
 interface StateMachineInterface
 {
@@ -22,13 +27,14 @@ interface StateMachineInterface
      * @since [*next-version*]
      *
      * @param string|Stringable $transition The transition.
+     * @psalm-param Transition $transition
      *
      * @throws CouldNotTransitionExceptionInterface If the transition failed or was aborted.
      * @throws StateMachineExceptionInterface       If any other error was encountered.
      *
-     * @return StateMachineInterface The state machine with the new state.
+     * @return static The state machine with the new state.
      */
-    public function transition($transition);
+    public function transition($transition): self;
 
     /**
      * Checks if a transition can be applied.
@@ -41,8 +47,9 @@ interface StateMachineInterface
      * @since [*next-version*]
      *
      * @param string|Stringable $transition The transition to check.
+     * @psalm-param Transition $transition
      *
      * @return bool True if the transition is possible, false if not.
      */
-    public function canTransition($transition);
+    public function canTransition($transition): bool;
 }

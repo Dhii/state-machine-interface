@@ -2,7 +2,7 @@
 
 namespace Dhii\State\Exception;
 
-use Dhii\Exception\ThrowableInterface;
+use Throwable;
 use Dhii\State\StateMachineAwareInterface;
 
 /**
@@ -11,7 +11,7 @@ use Dhii\State\StateMachineAwareInterface;
  * @since [*next-version*]
  */
 interface StateMachineExceptionInterface extends
-    ThrowableInterface,
+    Throwable,
     StateMachineAwareInterface
 {
 }

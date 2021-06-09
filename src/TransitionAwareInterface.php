@@ -2,12 +2,15 @@
 
 namespace Dhii\State;
 
-use Dhii\Util\String\StringableInterface as Stringable;
+use Stringable;
 
 /**
  * Something that is aware of, and can provide, a transition.
  *
  * @since [*next-version*]
+ *
+ * @psalm-import-type Transition from StateMachineInterface
+ * @psalm-immutable
  */
 interface TransitionAwareInterface
 {
@@ -17,6 +20,7 @@ interface TransitionAwareInterface
      * @since [*next-version*]
      *
      * @return string|Stringable The transition.
+     * @psalm-return Transition
      */
     public function getTransition();
 }

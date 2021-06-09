@@ -2,14 +2,12 @@
 
 namespace Dhii\State;
 
-use Dhii\Factory\FactoryInterface;
-
 /**
  * Something that can create new state machine instances.
  *
  * @since [*next-version*]
  */
-interface StateMachineFactoryInterface extends FactoryInterface
+interface StateMachineFactoryInterface
 {
     /**
      * {@inheritdoc}
