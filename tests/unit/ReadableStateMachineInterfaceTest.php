@@ -2,8 +2,11 @@
 
 namespace Dhii\State\UnitTest;
 
-use Xpmock\TestCase;
-use Dhii\Machine\ReadableStateMachineInterface as TestSubject;
+use Dhii\State\ReadableStateMachineInterface as Subject;
+use Dhii\State\StateAwareInterface;
+use Dhii\State\StateMachineInterface;
+use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests {@see TestSubject}.
@@ -13,28 +16,18 @@ use Dhii\Machine\ReadableStateMachineInterface as TestSubject;
 class ReadableStateMachineInterfaceTest extends TestCase
 {
     /**
-     * The class name of the test subject.
-     *
-     * @since [*next-version*]
-     */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\State\ReadableStateMachineInterface';
-
-    /**
      * Creates a new instance of the test subject.
      *
+     * @return Subject|MockObject
      * @since [*next-version*]
      *
-     * @return TestSubject
      */
-    public function createInstance()
+    public function createSubject(): Subject
     {
-        $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->getState()
-            ->getPossibleTransitions()
-            ->transition()
-            ->canTransition();
+        $mock = $this->getMockBuilder(Subject::class)
+            ->getMockForAbstractClass();
 
-        return $mock->new();
+        return $mock;
     }
 
     /**
@@ -42,24 +35,24 @@ class ReadableStateMachineInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    public function testCanBeCreated()
+    public function testCanBeCreated(): void
     {
-        $subject = $this->createInstance();
+        $subject = $this->createSubject();
 
         $this->assertInstanceOf(
-            static::TEST_SUBJECT_CLASSNAME,
+            Subject::class,
             $subject,
             'A valid instance of the test subject could not be created.'
         );
 
         $this->assertInstanceOf(
-            'Dhii\State\StateMachineInterface',
+            StateMachineInterface::class,
             $subject,
             'Test subject does not implement parent interface.'
         );
 
         $this->assertInstanceOf(
-            'Dhii\State\StateAwareInterface',
+            StateAwareInterface::class,
             $subject,
             'Test subject does not implement parent interface.'
         );
