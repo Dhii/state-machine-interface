@@ -67,15 +67,16 @@ echo $stateMachine->getState(); // 'backlog'
 try {
     $stateMachine3 = $stateMachine2->transition('cancel');
 } catch (CouldNotTransitionExceptionInterface $e) {
-    /* Error, because a task can only be cancelled from the backlog,
-     * and therefore it must first be deferred.
-     */
+    echo sprintf(
+        'Cannot perform transition "%1$s" from state "%2$s"',
+        $e->getTransition(), 
+        $e->getStateMachine()->getState()
+    );
 }
 
 if (!$stateMachine->canTransition('finish')) {
-    /* Cannot do this: the original instance remained in the backlog,
-     * and must first be selected and worked on before it can be finished. 
-     */  
+    echo 'Cannot do this: the original instance remained in the backlog,
+     * and must first be selected and worked on before it can be finished.';
 }
 ```
 
