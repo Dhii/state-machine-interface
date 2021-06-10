@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dhii\State;
 
 use Stringable;
@@ -10,7 +12,7 @@ use Stringable;
  * @since [*next-version*]
  *
  * @psalm-import-type Transition from StateMachineInterface
- * @psalm-immutable 
+ * @psalm-immutable
  */
 interface PossibleTransitionsAwareInterface
 {
