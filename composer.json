@@ -1,6 +1,6 @@
 {
   "name": "dhii/state-machine-interface",
-  "description": "Interop contracts for state machines",
+  "description": "Interop contracts for immutable State Machines",
   "type": "library",
   "license": "MIT",
   "authors": [
