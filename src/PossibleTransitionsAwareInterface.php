@@ -1,14 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dhii\State;
 
-use Dhii\Util\String\StringableInterface as Stringable;
-use Traversable;
+use Stringable;
 
 /**
  * Something that is aware of, and can provide, a list of transitions possible given its current state.
  *
  * @since [*next-version*]
+ *
+ * @psalm-import-type Transition from StateMachineInterface
+ * @psalm-immutable
  */
 interface PossibleTransitionsAwareInterface
 {
@@ -17,7 +21,8 @@ interface PossibleTransitionsAwareInterface
      *
      * @since [*next-version*]
      *
-     * @return string[]|Stringable[]|Traversable The currently possible transitions.
+     * @return iterable<string|Stringable> The currently possible transitions.
+     * @psalm-return Transition
      */
-    public function getPossibleTransitions();
+    public function getPossibleTransitions(): iterable;
 }

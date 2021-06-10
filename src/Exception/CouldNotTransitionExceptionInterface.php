@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dhii\State\Exception;
 
 use Dhii\State\TransitionAwareInterface;

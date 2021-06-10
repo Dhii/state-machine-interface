@@ -1,13 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dhii\State;
 
-use Dhii\Util\String\StringableInterface as Stringable;
+use Stringable;
 
 /**
  * Something that is aware of, and can provide, a state.
  *
  * @since [*next-version*]
+ *
+ * @psalm-immutable
  */
 interface StateAwareInterface
 {

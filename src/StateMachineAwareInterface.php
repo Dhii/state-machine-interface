@@ -1,11 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dhii\State;
 
 /**
  * Something that is aware of, and can provide, a state machine.
  *
  * @since [*next-version*]
+ *
+ * @psalm-immutable
  */
 interface StateMachineAwareInterface
 {
@@ -16,5 +20,5 @@ interface StateMachineAwareInterface
      *
      * @return StateMachineInterface|null The state machine instance, if any.
      */
-    public function getStateMachine();
+    public function getStateMachine(): ?StateMachineInterface;
 }
