@@ -24,10 +24,14 @@ interface StateMachineFactoryInterface
      *
      * @since [*next-version*]
      *
-     * @param array<string|Stringable, iterable<string|Stringable>> $map
-     * @psam-param array<string|Stringable, iterable<Transition>> $map
-     * @param string|Stringable $initialState
-     * @psam-param  State $initialState
+     * @param array<string|Stringable, iterable<string|Stringable>> $stateMap
+     *      A map, where each state maps to a list of possible transitions
+     * @psam-param array<State, iterable<Transition>> $stateMap
+     * @param array<string|Stringable, string> $transitionMap
+     *      A map, where each transition maps to its target state.
+     * @psam-param array<Transition, State> $transitionMap
+     * @param string|Stringable $initialState The initial state of this machine.
+     * @psam-param State $initialState
      *
      * @return StateMachineInterface The created state machine.
      * @psalm-return SM
@@ -35,5 +39,9 @@ interface StateMachineFactoryInterface
      * @throws RuntimeException If could not create.
      * @throws Exception If problem creating.
      */
-    public function createStateMachineFromStateMap(array $map, $initialState): StateMachineInterface;
+    public function createStateMachineFromStateMap(
+        array $stateMap,
+        array $transitionMap,
+        $initialState
+    ): StateMachineInterface;
 }
